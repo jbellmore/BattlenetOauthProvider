@@ -29,8 +29,6 @@ namespace Web
             // We'll configure Battlenet over here...
             app.UseBattlenetAuthentication(options =>
             {
-                options.ClientId = "";
-                options.ClientSecret = "";
                 options.CallbackPath = new PathString("/signin-battlenet");
                 options.Scope.Add("wow.profile");
             });
