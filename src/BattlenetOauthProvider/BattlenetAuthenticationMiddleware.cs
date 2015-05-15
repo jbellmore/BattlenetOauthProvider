@@ -1,9 +1,8 @@
 ﻿using BattlenetOauthProvider.Notifications;
+using Microsoft.AspNet.Authentication;
+using Microsoft.AspNet.Authentication.OAuth;
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Security;
-using Microsoft.AspNet.Security.DataProtection;
-using Microsoft.AspNet.Security.Infrastructure;
-using Microsoft.AspNet.Security.OAuth;
+using Microsoft.AspNet.DataProtection;
 using Microsoft.Framework.Logging;
 using Microsoft.Framework.OptionsModel;
 using System;
@@ -20,7 +19,7 @@ namespace BattlenetOauthProvider
             IOptions<ExternalAuthenticationOptions> externalOptions,
             IOptions<BattlenetAuthenticationOptions> options,
             ConfigureOptions<BattlenetAuthenticationOptions> configureOptions = null)
-            : base(next, services, dataProtectionProvider, loggerFactory, externalOptions, options, configureOptions)
+            : base(next, dataProtectionProvider, loggerFactory, externalOptions, options, configureOptions)
         {
             if (Options.Notifications == null)
             {

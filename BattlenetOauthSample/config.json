@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "BattlenetOauthSample"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-BattlenetOauthSample-fbcc51fe-f6c4-4a99-ad8f-424302ac48b6;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

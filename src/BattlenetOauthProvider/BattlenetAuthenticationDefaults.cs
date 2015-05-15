@@ -4,7 +4,7 @@ namespace BattlenetOauthProvider
 {
     public class BattlenetAuthorizationDefaults
     {
-        public const string AuthenticationType = "Battlenet";
+        public const string AuthenticationScheme = "Battlenet";
 
         public const string AuthorizationEndpoint = "https://us.battle.net/oauth/authorize";
 

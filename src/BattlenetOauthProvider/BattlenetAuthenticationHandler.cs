@@ -1,12 +1,15 @@
-﻿using BattlenetOauthProvider.Notifications;
-using Microsoft.AspNet.Security.OAuth;
-using Microsoft.Framework.Logging;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
-using Microsoft.AspNet.Http.Security;
-using Microsoft.AspNet.Security;
-using System.Threading.Tasks;
+using System.Net.Http.Headers;
 using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Http.Authentication;
+using Microsoft.AspNet.Authentication.OAuth;
+using Microsoft.AspNet.WebUtilities;
+using BattlenetOauthProvider.Notifications;
+using Microsoft.Framework.Logging;
+using Microsoft.AspNet.Authentication;
 
 namespace BattlenetOauthProvider
 {
@@ -46,21 +49,22 @@ namespace BattlenetOauthProvider
         protected async override Task<AuthenticationTicket> GetUserInformationAsync(AuthenticationProperties properties, TokenResponse tokens)
         {
             var context = new BattlenetAuthenticatedContext(Context, Options, null, tokens);
-            context.Identity = new ClaimsIdentity(
-                Options.AuthenticationType,
+            var identity = new ClaimsIdentity(
+                Options.AuthenticationScheme,
                 ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType);
 
             if (!string.IsNullOrEmpty(context.AccountId))
             {
-                context.Identity.AddClaim(new Claim("urn:battlenet:accountId", context.AccountId, ClaimValueTypes.String, Options.AuthenticationType));
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, context.AccountId, ClaimValueTypes.String, Options.AuthenticationScheme));
             }
 
             context.Properties = properties;
+            context.Principal = new ClaimsPrincipal(identity);
 
             await Options.Notifications.Authenticated(context);
 
-            return new AuthenticationTicket(context.Identity, context.Properties);
+            return new AuthenticationTicket(context.Principal, context.Properties, context.Options.AuthenticationScheme);
         }
     }
 }

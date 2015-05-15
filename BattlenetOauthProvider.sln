@@ -1,18 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22609.0
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{346980BC-4BCD-4644-912C-D67838A7B6A6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DAD699C5-BDEA-4642-9666-BDFE03C63EF8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34A9D6AA-CBC9-4BE3-9282-EA767876B3CD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{281DC438-4314-43FE-8E73-DC1919273C8A}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Web", "sample\Web\Web.kproj", "{CEECB284-537F-4352-9EAB-17F67274FF9F}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BattlenetOauthProvider", "src\BattlenetOauthProvider\BattlenetOauthProvider.xproj", "{9CFEF0FE-AD1B-4BA0-9469-A358A86DCC4A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BattlenetOauthProvider", "src\BattlenetOauthProvider\BattlenetOauthProvider.kproj", "{E78A1A3A-C367-411B-80E7-16FD73BF6CB3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{8BEB10CD-B829-4DCB-AFC1-68C422972058}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BattlenetOauthSample", "BattlenetOauthSample\BattlenetOauthSample.xproj", "{36CE75A0-C337-4CD5-82F6-7A009CF8ED20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,20 +22,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CEECB284-537F-4352-9EAB-17F67274FF9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEECB284-537F-4352-9EAB-17F67274FF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEECB284-537F-4352-9EAB-17F67274FF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEECB284-537F-4352-9EAB-17F67274FF9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E78A1A3A-C367-411B-80E7-16FD73BF6CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E78A1A3A-C367-411B-80E7-16FD73BF6CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E78A1A3A-C367-411B-80E7-16FD73BF6CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E78A1A3A-C367-411B-80E7-16FD73BF6CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CFEF0FE-AD1B-4BA0-9469-A358A86DCC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CFEF0FE-AD1B-4BA0-9469-A358A86DCC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CFEF0FE-AD1B-4BA0-9469-A358A86DCC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CFEF0FE-AD1B-4BA0-9469-A358A86DCC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36CE75A0-C337-4CD5-82F6-7A009CF8ED20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36CE75A0-C337-4CD5-82F6-7A009CF8ED20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36CE75A0-C337-4CD5-82F6-7A009CF8ED20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36CE75A0-C337-4CD5-82F6-7A009CF8ED20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{CEECB284-537F-4352-9EAB-17F67274FF9F} = {346980BC-4BCD-4644-912C-D67838A7B6A6}
-		{E78A1A3A-C367-411B-80E7-16FD73BF6CB3} = {346980BC-4BCD-4644-912C-D67838A7B6A6}
+		{9CFEF0FE-AD1B-4BA0-9469-A358A86DCC4A} = {DAD699C5-BDEA-4642-9666-BDFE03C63EF8}
+		{36CE75A0-C337-4CD5-82F6-7A009CF8ED20} = {8BEB10CD-B829-4DCB-AFC1-68C422972058}
 	EndGlobalSection
 EndGlobal

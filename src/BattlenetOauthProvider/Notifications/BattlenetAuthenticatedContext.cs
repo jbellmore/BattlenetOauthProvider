@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNet.Http;
-using Microsoft.AspNet.Security.OAuth;
+﻿using Microsoft.AspNet.Authentication.OAuth;
+using Microsoft.AspNet.Http;
 using Newtonsoft.Json.Linq;
 using System;
 

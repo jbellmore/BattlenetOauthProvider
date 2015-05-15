@@ -1,6 +1,6 @@
 ﻿using BattlenetOauthProvider.Notifications;
 using Microsoft.AspNet.Http;
-using Microsoft.AspNet.Security.OAuth;
+using Microsoft.AspNet.Authentication.OAuth;
 using System;
 
 namespace BattlenetOauthProvider
@@ -9,8 +9,8 @@ namespace BattlenetOauthProvider
     {
         public BattlenetAuthenticationOptions()
         {
-            AuthenticationType = BattlenetAuthorizationDefaults.AuthenticationType;
-            Caption = AuthenticationType;
+            AuthenticationScheme = BattlenetAuthorizationDefaults.AuthenticationScheme;
+            Caption = AuthenticationScheme;
             CallbackPath = new PathString("/signin-battlenet");
             AuthorizationEndpoint = BattlenetAuthorizationDefaults.AuthorizationEndpoint;
             TokenEndpoint = BattlenetAuthorizationDefaults.TokenEndpoint;

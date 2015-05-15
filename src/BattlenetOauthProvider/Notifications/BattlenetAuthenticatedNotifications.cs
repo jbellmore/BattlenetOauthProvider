@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Security.OAuth;
+﻿using Microsoft.AspNet.Authentication.OAuth;
 using System;
 using System.Threading.Tasks;
 
