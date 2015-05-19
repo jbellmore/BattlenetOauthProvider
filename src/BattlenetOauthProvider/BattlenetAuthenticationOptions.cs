@@ -14,6 +14,7 @@ namespace BattlenetOauthProvider
             CallbackPath = new PathString("/signin-battlenet");
             AuthorizationEndpoint = BattlenetAuthorizationDefaults.AuthorizationEndpoint;
             TokenEndpoint = BattlenetAuthorizationDefaults.TokenEndpoint;
+            UserInformationEndpoint = BattlenetAuthorizationDefaults.UserInformationEndpoint;
         }
     }
 }

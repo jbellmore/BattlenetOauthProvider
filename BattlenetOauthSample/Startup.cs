@@ -122,8 +122,8 @@ namespace BattlenetOauthSample
             // app.UseTwitterAuthentication();
             app.UseBattlenetAuthentication(options =>
             {
-                options.ClientId = "INSERT CLIENT ID HERE";
-                options.ClientSecret = "INSERT CLIENT SECRET HERE";
+                options.ClientId = "7nakjbt8k22fyz3n2qgz95eku9kdn3pa";
+                options.ClientSecret = "xqVAegpCT8akfEBSAWujd3g6aSHwtrAx";
                 options.Caption = "Battlenet";
             });
 

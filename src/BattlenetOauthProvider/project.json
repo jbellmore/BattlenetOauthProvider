@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.1-beta4",
+  "version": "1.0.2-beta4",
   "description": "Package to provide OAuth authentication using Blizzard's Battlenet API. This package is an extension for the Microsoft.Aspnet.Authentication package.",
   "authors": [ "Jarrod Bellmore" ],
   "tags": [ "" ],
