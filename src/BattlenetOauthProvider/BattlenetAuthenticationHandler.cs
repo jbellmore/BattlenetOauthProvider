@@ -72,6 +72,8 @@ namespace BattlenetOauthProvider
                 }
             }
 
+            identity.AddClaim(new Claim("urn:battlenet:access_token", tokens.AccessToken));
+
             context.Properties = properties;
             context.Principal = new ClaimsPrincipal(identity);
 
